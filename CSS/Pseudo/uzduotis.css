@@ -1,0 +1,79 @@
+a:visited {
+    color: red;
+}
+input[type=email] {
+    background: red;
+}
+input[type=number] {
+    background: green;
+}
+input[type=text] {
+    background: yellow;
+}
+button.raudona {
+    background: rgb(243, 0, 0);
+}
+
+button.geltona {
+    background-color: yellow;
+}
+button.zalia {
+    background-color: green;
+}
+button {
+    width: 100px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td:nth-child(odd) {
+    background-color: aqua;
+}
+
+td:nth-child(even) {
+    background-color: rgb(255, 0, 98);
+}
+
+tr:nth-of-type(even) td:nth-of-type(even) {
+    background-color: orange;
+}
+
+.parent {
+width: 200px;
+height: 200px;
+background: yellow;
+}
+
+.child {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: absolute;
+    left: 30px;
+}
+
+.grandchild {
+    width: 50px;
+    height: 50px;
+    background: green;
+    position: relative;
+    top: 10px;
+    left: 90px;
+}
+.bigcube {
+width: 200px;
+height: 200px;
+background: rgb(0, 255, 76);
+position: absolute;
+}
+
+.smallcube {
+    width: 100px;
+    height: 100px;
+    background: rgb(47, 0, 255);
+    position: relative;
+    left: 50px;
+    top: 50px;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CUBE</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            width: 50px;
+            height: 50px;
+            border: 2px solid #000;
+        }
+
+        .red {
+            background: red;
+        }
+
+        .blue {
+            background: blue;
+        }
+
+        .green {
+            background: green;
+        }
+
+        .grey {
+            background: grey
+        }
+    </style>
+
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td colspan="2" class="red"></td>
+            <td colspan="2" class="blue"></td>
+        </tr>
+
+        <tr>
+            <td rowspan="2" class="green"></td>
+            <td class="grey"></td>
+        </tr>
+
+        <tr>
+            <td colspan="2" class="red"></td>
+            <td colspan="2"></td>
+        </tr>
+    </table>
+</body>
+
+</html>

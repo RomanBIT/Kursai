@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Froms</title>
+</head>
+
+<body>
+    <form>
+        <div class="controls">
+
+            <div><label for="id">User ID:</label></div>
+            <input type="text" id="id" name="id" />
+            <label for="Vardas">
+                <div>*Vardas:</div>
+                <input name="First name" type="text" required>
+            </label>
+            <label for="Pavarde">
+                <div>*Pavarde:</div>
+                <input name="Last name" type="text" required>
+            </label>
+
+            <label for="email">
+                <div>E-mail:</div>
+                <input name="email" type="email">
+            </label>
+
+            <label for="Lytis">
+                <div>Lytis</div>
+                <input name="gender" type="radio" value="Vyras">Vyras
+                <input name="gender" type="radio" value="Moteris">Moteris
+            </label>
+
+            <label for="newsletter">
+                <div>Ar norite gauti naujienlaiskius?</div>
+                <input type="checkbox" name="newsletter">
+            </label>
+            <button type="submit">Prenumeruoti</button>
+
+            <div> <textarea name="Karikatura" maxlength="5" cols="30" rows="10"></textarea> </div>
+
+            <div>
+                <form action="/action_page.php" method="get">
+                    <div> <label for="browser">Pasirinkite miesta:</label></div>
+                    <input list="browsers" name="browser" id="browser">
+                    <datalist id="browsers">
+                        <option value="Kaunas">
+                        <option value="Vilnius">
+                        <option value="Klaipeda">
+                        <option value="Siauliai">
+                        <option value="Panevezys">
+                    </datalist>
+                    <button type="submit">Pasirinkti</button>
+            </div>
+            <div><button type="reset">Resetuojam</button></div>
+
+
+    </form>
+
+</body>
+
+</html>

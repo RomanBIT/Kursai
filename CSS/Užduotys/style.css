@@ -1,0 +1,21 @@
+
+
+        div {
+            width: 150px;
+            height: 200px;
+            background-color: blueviolet;
+        }
+
+        .Antras {
+            background: grey
+        }
+
+        #Trecias {
+            background-color: orange;
+        }
+
+        #Ketvirtas {
+            background: linear-gradient(to right, red, yellow);
+            width: 450px;
+            height: 45px;
+        }

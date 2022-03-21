@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <form>
+
+
+        <h3>Register</h3>
+        <div class="controls">
+
+            <p></p><label for="First name">
+                <div>*First name:</div>
+                <input name="First name" type="text" required>
+            </label></p>
+            <p> <label for="Last name">
+                    <div>*Last name:</div>
+                    <input name="Last name" type="text" required>
+                </label></p>
+
+            <p> <label for="email">
+                    <div>*E-mail:</div>
+                    <input name="email" type="email" required>
+                </label></p>
+
+            <p><label for="description"></label>
+            <div>Description</div>
+            <div> <textarea name="description" maxlength="200" cols="30" rows="10"></textarea> </div>
+            </p>
+
+            <label for="Gender">
+                <div>Gender</div>
+                <input name="gender" type="radio" value="Vyras">Vyras
+                <input name="gender" type="radio" value="Moteris">Moteris
+            </label>
+
+            <p>
+            <div>
+                <label for="date">*Date of birth:</label>
+                <input type="date" required>
+            </div>
+            </p>
+
+            <p>
+            <div>
+                <form action="/action_page.php" method="get">
+                    <div> <label for="browser">City of birth:</label></div>
+                    <input list="browsers" name="browser" id="browser">
+                    <datalist id="browsers">
+                        <option value="Kaunas">
+                        <option value="Vilnius">
+                        <option value="Klaipeda">
+                        <option value="Siauliai">
+                        <option value="Panevezys">
+                    </datalist>
+                    <button type="submit">Select</button>
+            </div>
+            </p>
+
+            <p></p><label for="Address">
+                <div>Address:</div>
+                <input name="Address" type="text">
+            </label></p>
+
+            <label for="newsletter">
+                <div>Subscribe to newsletter?</div>
+                <input type="checkbox" name="newsletter">
+            </label>
+            <button type="submit">Subscribe</button>
+
+
+
+
+            <p>
+            <div><button type="reset">Resetuojam</button></div>
+            </p>
+            <p>
+            <div><button type="submit">Submit</button></div>
+            </p>
+
+
+
+    </form>
+
+</body>
+
+</html>

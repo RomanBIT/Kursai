@@ -1,0 +1,35 @@
+.parent {
+    margin: 36px;
+    border: 1px solid #333;
+    text-align: center;
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    margin-bottom: 12px;
+}
+
+.inline-block {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background: red;
+    margin: auto;
+}
+
+.block {
+display: block;
+width: 150px;
+height: 100px;
+background: yellow;
+}
+.inline {
+display: inline;
+width: 100px;
+height: 100px;
+background: orange;
+}
+
+
