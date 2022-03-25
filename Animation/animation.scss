@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.loading {
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    border: 3px dotted rgba(247, 11, 11, 0.534);
+    border-bottom: none;
+    border-right: none;
+    border-radius: 50%;
+    animation: loading-spinner 4s linear infinite;
+    // animation-name: loading-spinner;
+    // animation-duration: 2s;
+    // animation-timing-function: linear;
+    // animation-iteration-count: infinite;
+}
+
+@keyframes loading-spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+        background: rgba(231, 192, 14, 0.822);
+        opacity: 50%;
+        width: 50px;
+        height: 5px;
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+.action {
+    font-weight: 700;
+    margin: 30px;
+}
+
+.transition {
+    background: #fff;
+    transition: background 300ms linear;
+
+    &:hover {
+        background: red;
+    }
+}
