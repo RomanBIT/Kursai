@@ -67,12 +67,18 @@ body {
 }
 
 .transition {
-  background: #fff;
-  -webkit-transition: background 300ms linear;
-  transition: background 300ms linear;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 300ms linear;
+  transition: 300ms linear;
 }
 
 .transition:hover {
-  background: red;
+  background: #0969e7;
+  opacity: 50%;
 }
 /*# sourceMappingURL=animation.css.map */
