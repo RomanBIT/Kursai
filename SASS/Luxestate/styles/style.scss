@@ -1,8 +1,12 @@
-@use "./shortends.scss";
+$text: #1f373d;
+$sky_blue: #96bece;
+$yellow: #ffcc01;
+
 
 body {
     margin: auto;
-    width: 1550px;
+    width: 1560px;
+
 }
 
 header {
@@ -23,17 +27,17 @@ header .l_side {
 
 header .main {
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 600;
 
     span {
-        padding: 34px;
+        padding: 30px;
     }
 }
 
 header .r_side {
     margin-left: 100px;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 600;
     padding-left: 48px;
 
     span {
@@ -44,7 +48,11 @@ header .r_side {
 header button {
     width: 140px;
     height: 40px;
-    background: $geltona;
+    background: $yellow;
     border: none;
     border-radius: 6px;
+    font-size: 13px;
+    color: $text;
+    font-weight: 600;
+    font-family: "Montserrat";
 }
