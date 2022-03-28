@@ -1,0 +1,50 @@
+@use "./shortends.scss";
+
+body {
+    margin: auto;
+    width: 1550px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 42px;
+    position: relative;
+}
+
+header .l_side {
+    padding-right: 235px;
+    font-size: 30px;
+    letter-spacing: -3px;
+    font-weight: 600;
+
+}
+
+header .main {
+    font-size: 16px;
+    font-weight: 400;
+
+    span {
+        padding: 34px;
+    }
+}
+
+header .r_side {
+    margin-left: 100px;
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 48px;
+
+    span {
+        padding: 48px;
+    }
+}
+
+header button {
+    width: 140px;
+    height: 40px;
+    background: $geltona;
+    border: none;
+    border-radius: 6px;
+}

@@ -1,0 +1,18 @@
+@use "./shortends.scss";
+
+body {
+    position: relative;
+}
+
+
+.landing {
+    background-color: $melyna;
+    width: 1360px;
+    height: 730px;
+    margin-top: 44px;
+    margin-left: 250px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
