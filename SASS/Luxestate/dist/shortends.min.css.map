@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAQA,AAAA,KAAK,AAAC,CACF,WAAW,CAAE,wBAAwB,CACrC,KAAK,CARF,OAAO,CASb",
+    "sources": [
+        "../styles/shortends.scss"
+    ],
+    "names": [],
+    "file": "shortends.min.css"
+}
