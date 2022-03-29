@@ -30,6 +30,7 @@ button:focus-within a {
 button:hover nav {
     display: block;
 }
+
 svg {
     box-shadow: 8px 8px 15px grey;
 }
@@ -38,10 +39,11 @@ svg {
     svg {
         display: none;
     }
+
     nav {
-         display: block;
+        display: block;
     }
-    
+
 }
 
 a {
@@ -72,4 +74,3 @@ li {
     width: 100px;
     box-shadow: 5px 3px 5px grey;
 }
-

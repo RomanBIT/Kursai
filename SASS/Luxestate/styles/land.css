@@ -58,6 +58,12 @@
   padding-top: 50px;
 }
 
+.search img {
+  width: 20px;
+  height: 20px;
+  margin-bottom: -3px;
+}
+
 .search button {
   font-size: 15px;
   letter-spacing: 0px;
@@ -77,5 +83,14 @@
   width: 470px;
   height: 71px;
   border-radius: 15px 0px 0px 15px;
+  font-size: 20px;
+  padding-left: 20px;
 }
-/*# sourceMappingURL=landing.css.map */
+
+@media (min-width: 768px) {
+  h2 {
+    color: #ffcc01;
+    font-size: 50px;
+  }
+}
+/*# sourceMappingURL=land.css.map */
