@@ -80,7 +80,7 @@ $yellow: #ffcc01;
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet) {
     h2 {
         color: #ffcc01;
         font-size: 50px;
