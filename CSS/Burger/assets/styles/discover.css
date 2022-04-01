@@ -1,0 +1,71 @@
+.discover {
+ margin: auto;
+ background: fixed;
+ background-color: white;
+ width: 1320px;
+ height: 500px;
+ display: flex;
+ margin-bottom: 100px;
+ box-shadow: 12px 11px 27px 1px rgba(0,0,0,0.26);
+-webkit-box-shadow: 12px 11px 27px 1px rgba(0,0,0,0.26);
+-moz-box-shadow: 12px 11px 27px 1px rgba(0,0,0,0.26);
+}
+
+.event-container {
+    padding: 64px 54px;
+    position: relative;
+    }
+    
+.disc-circle {
+    width: 17px;
+    height: 17px;
+    border-radius: 8px;
+    background-color: #dcdcdc;
+    margin-right: 7px;
+}
+
+.disc-circle:nth-child(1) {
+    background-color: #ffc045;
+}
+
+
+.dots {
+    display: flex;
+    position: absolute; 
+    bottom: 60px;
+}
+
+.discover img {
+   width: 715px;
+   height: 495px;
+   padding: 25px;
+   margin-left: -40px;
+}
+
+.discover h4 {  
+font-size: 29px;
+letter-spacing: 2px;
+line-height: 46px;
+color: #3d3d3d;
+font-weight: 700;
+font-family: "Bebas Neue";
+}
+
+.discover h2 {
+font-size: 42px;
+line-height: 46px;
+color: #3d2514;
+font-weight: 400;
+font-family: "Alfa Slab One";
+}
+
+.discover p {
+width: 531px;
+height: 173px;
+margin-top: 46px;
+font-size: 21px;
+line-height: 33px;
+color: #3d3d3d;
+font-weight: 400;
+font-family: "Montserrat";
+}

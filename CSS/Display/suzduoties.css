@@ -1,0 +1,45 @@
+.red {
+    height: 50px;
+    width: 50px;
+    background: red;
+    display: inline-block;
+    /* border: 2px solid black;     */
+    /* float: left; */
+    margin-right: -4px;
+
+}
+.blue {
+    height: 50px;
+    width: 50px;
+    background: blue;
+    display: block;
+    margin-top: -4px;
+}
+.yellow {
+    height: 50px;
+    width: 50px;
+    background: yellow;
+    display: inline-block;
+}
+.grey {
+    height: 50px;
+    width: 50px;
+    background: grey;
+    display: inline-block;
+}
+.parent {
+    display: block;
+    margin: 36px;
+    border: 1px solid black;
+    text-align: center;
+}
+.block {
+    font-size: 14px;
+    background-color: blue;
+    padding: 12px;
+    margin-bottom: 12px;
+    line-height: 20px;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+}

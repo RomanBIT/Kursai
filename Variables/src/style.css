@@ -1,0 +1,14 @@
+.cube {
+    width: 100px;
+    height: 100px;
+    margin: var(--margin-xs);
+    box-shadow: var(--shadow-sm);
+    background: var(--background);
+}
+.cube1 {
+    width: 100px;
+    height: 100px;
+    margin: var(--margin-xs);
+    box-shadow: 20px 20px 50px 10px pink inset; 
+    background: var(--background);
+   

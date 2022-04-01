@@ -1,0 +1,38 @@
+.register {
+    position: relative;
+    margin: auto;
+    width: 1320px;
+}
+
+.register p {
+    display: flex;
+justify-content: center;
+
+}
+
+.register input {
+width: 379px;
+height: 65px;
+border-radius: 5px;
+background-color: rgba(235,174,76,0);
+border: 1px solid #bebebe;
+margin: 14px;
+}
+
+.register button {
+    width: 379px;
+height: 65px;
+border-radius: 5px;
+border: 1px solid #bebebe;
+margin: 14px;
+background-color: #bf2222;
+font-size: 21px;
+line-height: 46px;
+color: #ffffff;
+font-weight: 400;
+font-family: "Alfa Slab One";
+}
+
+.register button {
+    cursor: not-allowed;
+}

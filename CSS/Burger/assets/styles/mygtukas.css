@@ -1,0 +1,33 @@
+.mygtukas {
+display: flex;
+justify-content: center;
+}
+
+.note {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 700;
+    color: #3d2514;
+    font-size: 25px;
+}
+
+.mygtukas .note {
+    position: absolute;
+    top: 15px;
+    left: 22px;   
+}
+
+.choose {
+    font-size: 50px;
+line-height: 38px;
+color: #3d2514;
+font-weight: 400;
+font-family: "Alfa Slab One";
+display: flex;
+justify-content: center;
+padding: 40px;
+}
+
+.text-under {
+    display: flex;
+    justify-content: center;
+}

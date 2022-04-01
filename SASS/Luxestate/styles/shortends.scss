@@ -1,0 +1,28 @@
+// Colors //
+
+$text: #1f373d;
+$sky_blue: #96bece;
+$yellow: #ffcc01;
+
+// Main //
+
+:root {
+    font-family: 'Montserrat', sans-serif;
+    color: $text;
+}
+
+// Breakpoints
+
+$tablet:768px;
+$desktop: 1080px;
+
+$fnt-fml: 'Montserrat',
+sans-serif;
+
+// flex //
+
+@mixin FCC {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

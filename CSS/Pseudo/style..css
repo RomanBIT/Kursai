@@ -1,0 +1,50 @@
+div {
+    background: red;
+}
+
+div div {
+    background: rgb(138, 79, 204);
+    color: azure;
+}
+
+div div div {
+    background: yellow;
+    color: brown;
+}
+
+.kubas, .staciakampis {
+    width: 100px;
+    height: 100px;
+    background: green;
+    margin-bottom: 10px;
+    border: 8px solid orange;
+    color: blue;
+    text-align: center;
+}
+
+.staciakampis {
+    width: 150px;
+    color: aqua;
+    flex-direction: row;
+}
+
+input[type=text] {
+    background: rebeccapurple;
+
+}
+input[type=textas] {
+    background: rgb(118, 124, 118);
+}
+
+a:visited {
+    color: rgb(211, 173, 4);
+}
+
+}
+button:disabled {
+    color: orange;
+}
+a:hover {
+    color: black;
+}
+

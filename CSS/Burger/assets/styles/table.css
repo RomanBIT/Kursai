@@ -1,0 +1,40 @@
+.table {
+padding-bottom: 73px;
+width: 1320px;
+margin: auto;
+position: relative;
+}   
+
+.table img {
+position: absolute;
+top: -120px;
+left: -180px;
+}
+
+.table img:last-of-type {
+margin-left: 1230px;
+margin-top: 260px;
+}
+
+.table h2 {
+    font-size: 50px;
+    letter-spacing: 3px;
+    line-height: 46px;
+    color: #3d2514;
+    font-weight: 400;   
+    font-family: "Alfa Slab One";
+    display: flex;
+justify-content: center;
+}
+
+.table h4 {
+    font-size: 29px;
+letter-spacing: 2px;
+line-height: 46px;
+color: #3d2514;
+font-weight: 700;
+font-family: "Bebas Neue";
+display: flex;
+justify-content: center;
+}
+

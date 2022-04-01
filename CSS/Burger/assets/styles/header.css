@@ -1,0 +1,68 @@
+
+/* 
+font-family: 'Alfa Slab One', cursive;
+font-family: 'Bebas Neue', cursive;
+font-family: 'Montserrat', sans-serif; 
+*/
+
+body {
+  font-family: 'Bebas Neue', cursive;
+  max-width: 1440px;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  padding: 50px 56px;
+  justify-content: space-between;
+  padding-top: 100px;
+  /* background: yellow; */
+}
+
+/* .logo {
+  height: 58px;
+} */
+
+.express-container { 
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 26px;
+}
+
+.express-container img {
+  margin-right: 8px;
+  height: 34px;
+}
+
+.express-container div, .right-side nav a {
+  color: #3d2514;
+  font-weight: 700;
+}
+
+.express-container div {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+}
+
+header .right-side nav a {
+ font-family: 'Bebas Neue';
+ font-size: 22px;
+ letter-spacing: 4px;
+ margin: 0 26px;
+}
+
+header .right-side nav a:first-child {
+  margin-left: 0;
+}
+
+header .right-side nav a:last-child {
+  margin-right: 0;
+}
+
+.glow {
+  width: 150px;
+  height: 150px;
+  background-color: #fff;
+
+  box-shadow: 120px 80px 40px 20px #0ff;

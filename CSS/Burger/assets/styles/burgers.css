@@ -1,0 +1,66 @@
+.burgers {
+    max-width: 1440px;
+    margin: auto;
+   display: flex;
+   justify-content: space-between;
+   padding: 70px 0px 20px;
+}
+
+.burgers img {
+margin-left: -20px;
+}
+
+.lorem {
+    max-width: 1440px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    font-size: 38px;
+    line-height: 38px;
+    color: #3d2514;
+    font-weight: 700;
+    font-family: "Bebas Neue";
+}
+
+.ipsum {
+    max-width: 1440px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 24px 0px;
+    font-size: 17px;
+    line-height: 21px;
+    color: #3d2514;
+    font-weight: 400;
+    font-family: "Montserrat";
+}
+
+.ipsum div {
+    display: flex;
+    justify-content: center;
+}
+
+.dolor {
+    max-width: 1440px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    font-size: 17px;
+    line-height: 38px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Alfa Slab One";
+    padding-bottom: 80px;
+    
+}
+
+.background {
+    max-width: 1440px;
+    margin: auto;
+    background-color: red;
+    padding: 11px 45px;
+}
+
+/* .burgers img:nth-child(2) {
+    margin-left: -35px;
+} */

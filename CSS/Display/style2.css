@@ -1,0 +1,29 @@
+
+.parent {
+    border: 1px solid black;
+    text-align: center;
+}
+
+.block {
+    background: red;
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    margin: auto;
+    border: 3px solid green;
+    text-align: center;
+}
+.inline {
+    background: blue;
+    width: 50px; /*neveikia*/
+    height: 50px; /*neveikia*/
+}
+.inline-block {
+    display: inline-block;
+    width: 500px;
+    height: 150px;
+    background: orange;
+    margin-top: 20px;
+    padding: 25px;
+    text-align: right;
+}

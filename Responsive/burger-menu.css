@@ -1,0 +1,76 @@
+header {
+    height: 250px;
+    padding: 20px;
+}
+
+menu {
+    position: relative;
+}
+
+nav {
+    position: absolute;
+    display: none;
+}
+
+button {
+    border: none;
+    outline: none;
+    color: white;
+    cursor: not-allowed;
+}
+
+button:focus nav {
+    visibility: visible;
+}
+
+button:focus-within a {
+    visibility: visible;
+}
+
+button:hover nav {
+    display: block;
+}
+
+svg {
+    box-shadow: 8px 8px 15px grey;
+}
+
+@media (min-width: 768px) {
+    svg {
+        display: none;
+    }
+
+    nav {
+        display: block;
+    }
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+ul {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 8px 8px 20px grey;
+}
+
+@media (min-width: 1024px) {
+    ul {
+        flex-direction: row;
+    }
+}
+
+li {
+    padding: 12px 6px;
+    width: 100px;
+    box-shadow: 5px 3px 5px grey;
+}

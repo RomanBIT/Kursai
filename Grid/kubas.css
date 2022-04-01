@@ -1,0 +1,52 @@
+body {
+    padding: 100px;
+    font-family: sans-serif;
+    font-size: 30px;
+}
+
+class ^="box-"] {
+    display: grid;
+    place-items: center; 
+}
+
+body {
+    display: grid;
+    height: 500px;
+    width: 500px;
+    /* grid-template-rows: auto 1fr auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px; */
+
+    grid-template-areas: 
+    "box1 box1 box2"
+    "box3 box4 box2"
+    "box3 box5 box5";
+    grid-gap: 2px;
+   
+}
+
+.box-1 {
+    grid-area: box1;
+    background: yellow;
+}
+.box-2 {
+    grid-area: box2;
+    background: red;
+}
+
+.box-3 {
+    grid-area: box3;
+    background: blue;
+}
+
+.box-4 {
+    grid-area: box4;
+    background: grey;
+}
+
+.box-5 {
+    grid-area: box5;
+    background: green;
+}
+
+
