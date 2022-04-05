@@ -59,6 +59,6 @@ body {
   transition: 300ms linear;
 }
 .transition:hover {
-  background: #0969e7;
+  background: rgb(9, 105, 231);
   opacity: 50%;
 }/*# sourceMappingURL=animation.css.map */

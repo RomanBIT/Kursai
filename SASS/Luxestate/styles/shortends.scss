@@ -3,6 +3,9 @@
 $text: #1f373d;
 $sky_blue: #96bece;
 $yellow: #ffcc01;
+$grey: #f6f5f4;
+$box_blue: #b1d7e8;
+$white: #ffffff;
 
 // Main //
 
@@ -25,4 +28,10 @@ sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@mixin FCE {
+    display: flex;
+    align-items: center;
+    justify-content: end;
 }

@@ -1,13 +1,9 @@
 @import 'shortends';
 
-.container_dsktp {
+body {
     max-width: 1080px;
     margin: auto;
-}
-
-.container_tblt {
-    max-width: 1080px;
-    margin: auto;
+    padding: 20px;
 }
 
 header {
@@ -58,6 +54,14 @@ header .r_side {
     }
 }
 
+// FIRST LANDING //
+
+
+@media (max-width: $tablet) {
+    .first_land {
+        height: 240px;
+    }
+}
 
 .landing {
     background: $sky_blue;
@@ -151,6 +155,10 @@ header .r_side {
 }
 
 @media (max-width: $tablet) {
+
+    body {
+        padding: 0px;
+    }
 
     .container_tblt body {
         width: $tablet;
@@ -254,4 +262,256 @@ header .r_side {
 @media (max-width: $desktop) {
     header {}
 
+}
+
+// SECOND LANDING with GRID//
+
+
+
+.second__land {
+
+    display: flex;
+    justify-content: space-between;
+    padding-top: 120px;
+}
+
+@media (max-width: $tablet) {
+    .second__land {
+        flex-direction: column;
+        padding: 10px;
+    }
+}
+
+.second__land--left {
+    h2 {
+        width: 300px;
+        padding-bottom: 70px;
+        font-size: 35px;
+        letter-spacing: -2px;
+        line-height: 40px;
+        font-weight: 600;
+    }
+
+    p {
+        width: 480px;
+        height: 130px;
+        font-size: 11px;
+        letter-spacing: 0px;
+        line-height: 30px;
+        font-weight: 400;
+        padding-top: 30px;
+
+    }
+}
+
+@media (max-width: $tablet) {
+
+    body {
+        padding: 0px;
+    }
+
+    .second__land--left {
+        padding-bottom: 0px;
+    }
+
+    .second__land--left h2 {
+        padding: 10px;
+
+    }
+
+    .second__land--left p {
+        width: fit-content;
+        height: fit-content;
+    }
+}
+
+
+[class ^="box-"] {
+    display: grid;
+    background: $grey;
+    height: 200px;
+    width: 200px;
+}
+
+.second__land--right {
+    display: grid;
+    grid-template-areas:
+        "box1 box2"
+        "box3 box4";
+    grid-gap: 30px;
+
+    h2 {
+        margin: auto;
+        font-size: 40px;
+        letter-spacing: -1px;
+        line-height: 50px;
+        color: $yellow;
+        font-weight: 600;
+    }
+
+    h4 {
+        margin: auto;
+        font-size: 14px;
+        letter-spacing: 0px;
+        line-height: 50px;
+        font-weight: 600;
+    }
+}
+
+@media (max-width: $tablet) {
+
+    [class ^="box-"] {
+        display: grid;
+        background: $grey;
+        height: fit-content;
+        width: 100%;
+    }
+
+    .second__land--right {
+        padding-top: 20px;
+        grid-gap: 10px;
+        grid-template-areas:
+            "box1"
+            "box2"
+            "box3"
+            "box4";
+    }
+}
+
+.box-1 {
+    grid-area: box1;
+    padding: 60px 0px 60px 0px;
+}
+
+.box-2 {
+    grid-area: box2;
+    padding: 60px 0px 60px 0px;
+}
+
+.box-3 {
+    grid-area: box3;
+    padding: 60px 0px 60px 0px;
+}
+
+.box-4 {
+    grid-area: box4;
+    padding: 60px 0px 60px 0px;
+}
+
+@media (max-width: $tablet) {
+    .box-1 {
+        padding: 20px;
+    }
+
+    .box-2 {
+        padding: 20px;
+    }
+
+    .box-3 {
+        padding: 20px;
+    }
+
+    .box-4 {
+        padding: 20px;
+    }
+}
+
+
+// THIRD LAND with GRID //
+
+.third__land {
+    margin-top: 80px;
+    background: $grey;
+
+    h2 {
+        padding-top: 60px;
+    }
+
+    h5 {
+        font-size: 13px;
+        letter-spacing: 0px;
+        font-weight: 600;
+    }
+}
+
+@media (max-width: $tablet) {
+    .third__land {
+        flex-direction: column;
+        padding: 10px;
+    }
+}
+
+.third__land--top {
+    font-size: 40px;
+    letter-spacing: -1px;
+    line-height: 50px;
+    font-weight: 600;
+    width: 50%;
+}
+
+@media (max-width: $tablet) {
+    .third__land--top {
+        width: 75%
+    }
+
+}
+
+[class ^="pic_frame-"] {
+    display: grid;
+    background: $box_blue;
+    height: 360px;
+    width: 330px;
+    margin-top: 30px;
+}
+
+[class ^="spec_frame-"] {
+    display: grid;
+    background: $white;
+    height: 110px;
+    width: 330px;
+    padding: 28px;
+}
+
+.third__land--grid {
+    padding-top: 60px;
+    display: grid;
+    justify-content: space-between;
+    grid-template-areas:
+        "pic pic pic"
+        "spec spec spec";
+}
+
+.third__land--pic_frame-1 {
+    grid-area: pic;
+
+}
+
+.third__land--spec_frame-2 {
+    grid-area: spec;
+}
+
+
+.lower-container {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+    .price {
+        font-size: 18px;
+        letter-spacing: 0px;
+        line-height: 50px;
+        color: red;
+        font-weight: 600;
+    }
+
+    .description {
+        @include FCE;
+        font-size: 13px;
+
+        img {
+            margin-right: -17px;
+        }
+    }
 }
