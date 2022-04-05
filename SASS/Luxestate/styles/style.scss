@@ -1,12 +1,12 @@
 @import 'shortends';
 
 body {
-    max-width: 1080px;
     margin: auto;
-    padding: 20px;
 }
 
 header {
+    margin: auto;
+    max-width: 1080px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -56,6 +56,10 @@ header .r_side {
 
 // FIRST LANDING //
 
+.first_land {
+    max-width: 1080px;
+    margin: auto;
+}
 
 @media (max-width: $tablet) {
     .first_land {
@@ -259,17 +263,13 @@ header .r_side {
     }
 }
 
-@media (max-width: $desktop) {
-    header {}
-
-}
-
 // SECOND LANDING with GRID//
 
 
 
 .second__land {
-
+    margin: auto;
+    max-width: 1080px;
     display: flex;
     justify-content: space-between;
     padding-top: 120px;
@@ -419,9 +419,22 @@ header .r_side {
 
 // THIRD LAND with GRID //
 
-.third__land {
-    margin-top: 80px;
+
+.background-wrapper {
     background: $grey;
+    width: 100%;
+    margin-top: 80px;
+}
+
+@media (max-width: $tablet) {
+    .background-wrapper {
+        margin-top: 0px;
+    }
+}
+
+.third__land-container {
+    margin: auto;
+    max-width: 1080px;
 
     h2 {
         padding-top: 60px;
@@ -431,6 +444,14 @@ header .r_side {
         font-size: 13px;
         letter-spacing: 0px;
         font-weight: 600;
+    }
+}
+
+@media (max-width: $tablet) {
+    .third__land-container {
+        h2 {
+            padding-top: 0px;
+        }
     }
 }
 
@@ -451,7 +472,9 @@ header .r_side {
 
 @media (max-width: $tablet) {
     .third__land--top {
-        width: 75%
+        margin: auto;
+        width: 100%;
+        padding: 20px;
     }
 
 }
@@ -460,25 +483,36 @@ header .r_side {
     display: grid;
     background: $box_blue;
     height: 360px;
-    width: 330px;
-    margin-top: 30px;
+    width: 350px;
 }
 
 [class ^="spec_frame-"] {
     display: grid;
     background: $white;
     height: 110px;
-    width: 330px;
+    width: 350px;
     padding: 28px;
 }
 
 .third__land--grid {
     padding-top: 60px;
     display: grid;
-    justify-content: space-between;
+    justify-content: center;
     grid-template-areas:
         "pic pic pic"
         "spec spec spec";
+    grid-gap: 20px
+}
+
+@media (max-width: $tablet) {
+    .third__land--grid {
+        grid-template-areas:
+            "pic"
+            "spec";
+            padding-top: 0px;
+    }
+
+
 }
 
 .third__land--pic_frame-1 {
@@ -502,7 +536,7 @@ header .r_side {
         font-size: 18px;
         letter-spacing: 0px;
         line-height: 50px;
-        color: red;
+        color: $yellow;
         font-weight: 600;
     }
 
@@ -513,5 +547,93 @@ header .r_side {
         img {
             margin-right: -17px;
         }
+    }
+}
+
+.second-search-container {
+    display: flex;
+    align-items: flex-end;
+}
+
+@media (max-width: $tablet) {
+    .second-search-container {
+        display: block;
+        text-align: -webkit-center;
+    }
+}
+
+.second-search {
+
+    img {
+        width: 15px;
+        height: 15px;
+        margin-bottom: -3px;
+    }
+
+    padding-top: 30px;
+
+    button {
+        font-size: 13px;
+        letter-spacing: 0px;
+        font-weight: 600;
+        color: $text;
+        background: $yellow;
+        padding: 20px 40px;
+        border: none;
+        margin-left: -4px;
+        border-radius: 0px 5px 5px 0px;
+    }
+
+
+    input {
+        border: none;
+        padding: 20px 150px 20px 0px;
+        border-radius: 5px 0px 0px 5px;
+        font-size: 13px;
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: $tablet) {
+
+    .second-search-container {
+        max-width: fit-content;
+        margin: auto;
+    }
+
+    .second-search-container .second-search {
+        align-items: center;
+    }
+
+    .second-search-container .second-search button {
+        border-radius: 5px 5px 5px 5px;
+    }
+
+    .second-search-container button {
+        margin-top: 20px;
+
+    }
+
+    .second-search-container input {
+        border-radius: 5px 5px 5px 5px;
+    }
+}
+
+
+.button-view {
+    padding: 20px 40px;
+    margin-left: 40px;
+    background: $white;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    color: $text;
+    font-weight: 600;
+    font-family: $fnt-fml;
+}
+
+@media (max-width: $tablet) {
+    .button-view {
+        margin: auto;
     }
 }
