@@ -301,6 +301,7 @@ header .r_side span {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
+    text-align: justify;
   }
 }
 [class^=box-] {
@@ -388,6 +389,7 @@ header .r_side span {
   background: #f6f5f4;
   width: 100%;
   margin-top: 80px;
+  padding-bottom: 60px;
 }
 
 @media (max-width: 768px) {
@@ -463,6 +465,12 @@ header .r_side span {
     padding-top: 0px;
   }
 }
+.frame-conainer {
+  box-shadow: 10px 10px 29px 5px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 10px 10px 29px 5px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 10px 10px 29px 5px rgba(0, 0, 0, 0.16);
+}
+
 .third__land--pic_frame-1 {
   grid-area: pic;
 }
@@ -496,6 +504,7 @@ header .r_side span {
 .second-search-container {
   display: flex;
   align-items: flex-end;
+  padding-top: 20px;
 }
 
 @media (max-width: 768px) {
@@ -571,4 +580,194 @@ header .r_side span {
   .button-view {
     margin: auto;
   }
+}
+.forth__land-container {
+  margin: auto;
+  max-width: 1080px;
+  padding: 40px 10px 80px 10px;
+}
+
+@media (max-width: 768px) {
+  .forth__land {
+    padding: 30px 10px 10px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+.forth__land--title h2 {
+  font-size: 40px;
+  letter-spacing: -2px;
+  line-height: 50px;
+  font-weight: 600;
+}
+.forth__land--title p {
+  padding-top: 40px;
+  padding-right: 660px;
+  font-size: 14px;
+  letter-spacing: 0px;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .forth__land--title h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .forth__land--title p {
+    padding-top: 40px;
+    padding-right: 0px;
+    text-align: justify;
+  }
+}
+[class^=forth_land-] {
+  display: grid;
+  background: #b1d7e8;
+  height: 100%;
+  width: 100%;
+}
+
+.forth_frame-conainer {
+  box-shadow: 10px 10px 29px 5px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 10px 10px 29px 5px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 10px 10px 29px 5px rgba(0, 0, 0, 0.16);
+}
+
+.forth__land--grid {
+  padding-top: 60px;
+  display: grid;
+  justify-content: center;
+  grid-template-areas: "land1 land2 land3";
+  grid-gap: 28px;
+}
+
+@media (max-width: 768px) {
+  .forth__land--grid {
+    grid-template-areas: "land1" "land2" "land3";
+  }
+}
+.forth_land-1 {
+  grid-area: land1;
+  background: #ffcc01;
+}
+.forth_land-1 img {
+  margin-left: -26px;
+  margin-top: -25px;
+}
+.forth_land-1 .p-button {
+  padding: 0px 70px 50px 70px;
+}
+.forth_land-1 p {
+  font-size: 13px;
+  padding-bottom: 20px;
+  color: #ffffff;
+}
+.forth_land-1 h2 {
+  font-size: 18px;
+  letter-spacing: 0px;
+  line-height: 63px;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0px 0px 0px 40px;
+}
+.forth_land-1 h4 {
+  font-size: 15px;
+  letter-spacing: 0px;
+  line-height: 30px;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0px 70px 0px 70px;
+}
+.forth_land-1 button {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  background: none;
+  border-bottom: 3px solid #ffffff;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+
+.forth_land-2 {
+  grid-area: land1;
+  background: #ffffff;
+}
+.forth_land-2 img {
+  margin-left: -26px;
+  margin-top: -25px;
+}
+.forth_land-2 .p-button {
+  padding: 0px 70px 50px 70px;
+}
+.forth_land-2 p {
+  font-size: 13px;
+  padding-bottom: 20px;
+}
+.forth_land-2 h2 {
+  font-size: 18px;
+  letter-spacing: 0px;
+  line-height: 63px;
+  font-weight: 600;
+  padding: 0px 0px 0px 40px;
+}
+.forth_land-2 h4 {
+  font-size: 15px;
+  letter-spacing: 0px;
+  line-height: 30px;
+  font-weight: 600;
+  padding: 0px 70px 0px 70px;
+}
+.forth_land-2 button {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  background: none;
+  border-bottom: 3px solid #1f373d;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+
+.forth_land-3 {
+  grid-area: land1;
+  background: #ffffff;
+}
+.forth_land-3 img {
+  margin-left: -26px;
+  margin-top: -25px;
+}
+.forth_land-3 .p-button {
+  padding: 0px 70px 50px 70px;
+}
+.forth_land-3 p {
+  font-size: 13px;
+  padding-bottom: 20px;
+}
+.forth_land-3 h2 {
+  font-size: 18px;
+  letter-spacing: 0px;
+  line-height: 63px;
+  font-weight: 600;
+  padding: 0px 0px 0px 40px;
+}
+.forth_land-3 h4 {
+  font-size: 15px;
+  letter-spacing: 0px;
+  line-height: 30px;
+  font-weight: 600;
+  padding: 0px 70px 0px 70px;
+}
+.forth_land-3 button {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  background: none;
+  border-bottom: 3px solid #1f373d;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  padding-bottom: 10px;
 }/*# sourceMappingURL=style.css.map */
