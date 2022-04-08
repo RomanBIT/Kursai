@@ -1,11 +1,15 @@
 .hover-me {
   position: relative;
 }
+
 .hover-me menu {
   position: absolute;
   left: -100%;
+  -webkit-transition: left 500ms linear;
   transition: left 500ms linear;
 }
+
 .hover-me:hover menu {
   left: 0;
-}/*# sourceMappingURL=hover-trans.css.map */
+}
+/*# sourceMappingURL=hover-trans.css.map */

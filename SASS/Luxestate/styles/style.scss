@@ -54,6 +54,42 @@ header .r_side {
     }
 }
 
+header .main-mobile {
+    display: none;
+}
+
+@media (max-width: $tablet) {
+    header .main-mobile {
+        display: none;
+        font-family: $fnt-fml;
+        font-weight: 600;
+    }
+}
+
+// HOVER HEADER MENU //
+
+@media (max-width: $tablet) {
+
+    .container_tblt body {
+        width: $tablet;
+    }
+
+    .hover-me:focus .main-mobile {
+        visibility: visible;
+    }
+
+    .hover-me:hover .main-mobile {
+        display: grid;
+        justify-items: end;
+        grid-gap: 8px;
+        padding: 12px;
+    }
+
+    .hover-me:hover img {
+        display: none;
+    }
+}
+
 // FIRST LANDING //
 
 .first_land {
