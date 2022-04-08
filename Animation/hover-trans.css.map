@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,SAAS,CAAC;EACN,QAAQ,EAAE,QAAQ;CAarB;;AAdD,AAGI,SAHK,CAGL,IAAI,CAAC;EACD,QAAQ,EAAE,QAAQ;EAClB,IAAI,EAAE,KAAK;EACX,UAAU,EAAE,iBAAiB;CAChC;;AAPL,AAUQ,SAVC,AASJ,MAAM,CACH,IAAI,CAAC;EACD,IAAI,EAAE,CAAC;CACV",
-    "sources": [
-        "hover-trans.scss"
-    ],
-    "names": [],
-    "file": "hover-trans.css"
-}
+{"version":3,"sources":["hover-trans.scss","hover-trans.css"],"names":[],"mappings":"AAAA;EACI,kBAAA;ACCJ;ADCI;EACI,kBAAA;EACA,WAAA;EACA,6BAAA;ACCR;ADGQ;EACI,OAAA;ACDZ","file":"hover-trans.css"}

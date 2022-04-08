@@ -1,5 +1,5 @@
 :root {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #1f373d;
 }
 
@@ -10,15 +10,9 @@ body {
 header {
   margin: auto;
   max-width: 1080px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   padding-top: 42px;
   position: relative;
 }
@@ -28,7 +22,6 @@ header {
   border: none;
   background: white;
 }
-
 .menu_button img {
   border: none;
   background: white;
@@ -47,7 +40,6 @@ header .main {
   font-size: 13px;
   font-weight: 600;
 }
-
 header .main span {
   padding: 16px;
 }
@@ -56,7 +48,6 @@ header .r_side {
   font-size: 13px;
   font-weight: 600;
 }
-
 header .r_side span {
   padding-right: 30px;
 }
@@ -72,26 +63,26 @@ header .main-mobile {
     font-weight: 600;
   }
 }
-
 @media (max-width: 768px) {
   .container_tblt body {
     width: 768px;
   }
+
   .hover-me:focus .main-mobile {
     visibility: visible;
   }
+
   .hover-me:hover .main-mobile {
-    display: -ms-grid;
     display: grid;
     justify-items: end;
     grid-gap: 8px;
     padding: 12px;
   }
+
   .hover-me:hover img {
     display: none;
   }
 }
-
 .first_land {
   max-width: 1080px;
   margin: auto;
@@ -102,7 +93,6 @@ header .main-mobile {
     height: 240px;
   }
 }
-
 .landing {
   background: #96bece;
   width: 920px;
@@ -110,37 +100,23 @@ header .main-mobile {
   margin-top: 44px;
   margin-left: 160px;
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  align-items: flex-end;
+  justify-content: end;
   z-index: -1;
 }
 
 .contacts {
   background: #ffcc01;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  align-items: center;
   font-size: 20px;
   font-weight: 600;
   letter-spacing: 0px;
   padding-left: 58px;
   padding-right: 26px;
 }
-
 .contacts div {
   padding: 32px;
 }
@@ -159,13 +135,11 @@ header .main-mobile {
 .search {
   padding-top: 30px;
 }
-
 .search img {
   width: 15px;
   height: 15px;
   margin-bottom: -3px;
 }
-
 .search button {
   font-size: 13px;
   letter-spacing: 0px;
@@ -179,7 +153,6 @@ header .main-mobile {
   margin-left: -4px;
   border-radius: 0px 5px 5px 0px;
 }
-
 .search input {
   border: none;
   width: 265px;
@@ -209,29 +182,28 @@ header .main-mobile {
   body {
     padding: 0px;
   }
+
   .container_tblt body {
     width: 768px;
   }
+
   .menu_button {
     display: block;
   }
+
   header {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    align-items: center;
+    justify-content: space-between;
     padding: 10px 0px 10px 10px;
     position: relative;
   }
+
   header .l_side {
     padding-left: 0px;
     padding-right: 0px;
   }
+
   header .main {
     display: none;
     font-size: 13px;
@@ -240,35 +212,29 @@ header .main-mobile {
   header .main span {
     padding: 16px;
   }
+
   header .r_side {
     display: none;
   }
+
   .main_button {
     display: none;
   }
+
   .landing {
     width: 100%;
     height: 240px;
     margin-top: 0px;
     margin-left: 0px;
     position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    align-items: flex-end;
   }
+
   .contacts {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     font-size: 10px;
     font-weight: 600;
@@ -278,32 +244,22 @@ header .main-mobile {
   .contacts div {
     padding: 20px;
   }
+
   .slogan {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-items: center;
+    justify-content: center;
     margin: auto;
     max-width: 100%;
     line-height: 30px;
     font-size: 22px;
     padding-top: 60px;
   }
+
   .search {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-items: center;
+    justify-content: center;
     padding-top: 10px;
   }
   .search img {
@@ -319,33 +275,25 @@ header .main-mobile {
     height: 30px;
     padding-left: 20px;
   }
+
   .scroll {
     display: none;
   }
 }
-
 .second__land {
   margin: auto;
   max-width: 1080px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding-top: 120px;
 }
 
 @media (max-width: 768px) {
   .second__land {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     padding: 10px;
   }
 }
-
 .second__land--left h2 {
   width: 300px;
   padding-bottom: 70px;
@@ -354,7 +302,6 @@ header .main-mobile {
   line-height: 40px;
   font-weight: 600;
 }
-
 .second__land--left p {
   width: 480px;
   height: 130px;
@@ -369,12 +316,15 @@ header .main-mobile {
   body {
     padding: 0px;
   }
+
   .second__land--left {
     padding-bottom: 0px;
   }
+
   .second__land--left h2 {
     padding: 10px;
   }
+
   .second__land--left p {
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -385,9 +335,7 @@ header .main-mobile {
     text-align: justify;
   }
 }
-
-[class^="box-"] {
-  display: -ms-grid;
+[class^=box-] {
   display: grid;
   background: #f6f5f4;
   height: 200px;
@@ -395,12 +343,10 @@ header .main-mobile {
 }
 
 .second__land--right {
-  display: -ms-grid;
   display: grid;
-      grid-template-areas: "box1 box2" "box3 box4";
+  grid-template-areas: "box1 box2" "box3 box4";
   grid-gap: 30px;
 }
-
 .second__land--right h2 {
   margin: auto;
   font-size: 40px;
@@ -409,7 +355,6 @@ header .main-mobile {
   color: #ffcc01;
   font-weight: 600;
 }
-
 .second__land--right h4 {
   margin: auto;
   font-size: 14px;
@@ -419,8 +364,7 @@ header .main-mobile {
 }
 
 @media (max-width: 768px) {
-  [class^="box-"] {
-    display: -ms-grid;
+  [class^=box-] {
     display: grid;
     background: #f6f5f4;
     height: -webkit-fit-content;
@@ -428,37 +372,29 @@ header .main-mobile {
     height: fit-content;
     width: 100%;
   }
+
   .second__land--right {
     padding-top: 20px;
     grid-gap: 10px;
-        grid-template-areas: "box1" "box2" "box3" "box4";
+    grid-template-areas: "box1" "box2" "box3" "box4";
   }
 }
-
 .box-1 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: box1;
   padding: 60px 0px 60px 0px;
 }
 
 .box-2 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
   grid-area: box2;
   padding: 60px 0px 60px 0px;
 }
 
 .box-3 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
   grid-area: box3;
   padding: 60px 0px 60px 0px;
 }
 
 .box-4 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
   grid-area: box4;
   padding: 60px 0px 60px 0px;
 }
@@ -467,17 +403,19 @@ header .main-mobile {
   .box-1 {
     padding: 20px;
   }
+
   .box-2 {
     padding: 20px;
   }
+
   .box-3 {
     padding: 20px;
   }
+
   .box-4 {
     padding: 20px;
   }
 }
-
 .background-wrapper {
   background: #f6f5f4;
   width: 100%;
@@ -490,16 +428,13 @@ header .main-mobile {
     margin-top: 0px;
   }
 }
-
 .third__land-container {
   margin: auto;
   max-width: 1080px;
 }
-
 .third__land-container h2 {
   padding-top: 60px;
 }
-
 .third__land-container h5 {
   font-size: 13px;
   letter-spacing: 0px;
@@ -511,17 +446,12 @@ header .main-mobile {
     padding-top: 0px;
   }
 }
-
 @media (max-width: 768px) {
   .third__land {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     padding: 10px;
   }
 }
-
 .third__land--top {
   font-size: 40px;
   letter-spacing: -1px;
@@ -537,17 +467,14 @@ header .main-mobile {
     padding: 20px;
   }
 }
-
-[class^="pic_frame-"] {
-  display: -ms-grid;
+[class^=pic_frame-] {
   display: grid;
   background: #b1d7e8;
   height: 360px;
   width: 350px;
 }
 
-[class^="spec_frame-"] {
-  display: -ms-grid;
+[class^=spec_frame-] {
   display: grid;
   background: #ffffff;
   height: 110px;
@@ -557,22 +484,18 @@ header .main-mobile {
 
 .third__land--grid {
   padding-top: 60px;
-  display: -ms-grid;
   display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-      grid-template-areas: "pic pic pic" "spec spec spec";
+  justify-content: center;
+  grid-template-areas: "pic pic pic" "spec spec spec";
   grid-gap: 20px;
 }
 
 @media (max-width: 768px) {
   .third__land--grid {
-        grid-template-areas: "pic" "spec";
+    grid-template-areas: "pic" "spec";
     padding-top: 0px;
   }
 }
-
 .frame-conainer {
   box-shadow: 10px 10px 29px 5px rgba(0, 0, 0, 0.16);
   -webkit-box-shadow: 10px 10px 29px 5px rgba(0, 0, 0, 0.16);
@@ -580,31 +503,18 @@ header .main-mobile {
 }
 
 .third__land--pic_frame-1 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
   grid-area: pic;
 }
 
 .third__land--spec_frame-2 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
   grid-area: spec;
 }
 
 .lower-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
 }
-
 .lower-container .price {
   font-size: 18px;
   letter-spacing: 0px;
@@ -612,31 +522,19 @@ header .main-mobile {
   color: #ffcc01;
   font-weight: 600;
 }
-
 .lower-container .description {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  align-items: center;
+  justify-content: end;
   font-size: 13px;
 }
-
 .lower-container .description img {
   margin-right: -17px;
 }
 
 .second-search-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  align-items: flex-end;
   padding-top: 20px;
 }
 
@@ -646,17 +544,14 @@ header .main-mobile {
     text-align: -webkit-center;
   }
 }
-
 .second-search {
   padding-top: 30px;
 }
-
 .second-search img {
   width: 15px;
   height: 15px;
   margin-bottom: -3px;
 }
-
 .second-search button {
   font-size: 13px;
   letter-spacing: 0px;
@@ -668,7 +563,6 @@ header .main-mobile {
   margin-left: -4px;
   border-radius: 0px 5px 5px 0px;
 }
-
 .second-search input {
   border: none;
   padding: 20px 150px 20px 0px;
@@ -684,22 +578,23 @@ header .main-mobile {
     max-width: fit-content;
     margin: auto;
   }
+
   .second-search-container .second-search {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
   }
+
   .second-search-container .second-search button {
     border-radius: 5px 5px 5px 5px;
   }
+
   .second-search-container button {
     margin-top: 20px;
   }
+
   .second-search-container input {
     border-radius: 5px 5px 5px 5px;
   }
 }
-
 .button-view {
   padding: 20px 40px;
   margin-left: 40px;
@@ -717,7 +612,6 @@ header .main-mobile {
     margin: auto;
   }
 }
-
 .forth__land-container {
   margin: auto;
   max-width: 1080px;
@@ -732,14 +626,12 @@ header .main-mobile {
     width: fit-content;
   }
 }
-
 .forth__land--title h2 {
   font-size: 40px;
   letter-spacing: -2px;
   line-height: 50px;
   font-weight: 600;
 }
-
 .forth__land--title p {
   padding-top: 40px;
   padding-right: 660px;
@@ -751,15 +643,9 @@ header .main-mobile {
 
 @media (max-width: 768px) {
   .forth__land--title h2 {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-items: center;
+    justify-content: center;
   }
   .forth__land--title p {
     padding-top: 40px;
@@ -767,9 +653,7 @@ header .main-mobile {
     text-align: justify;
   }
 }
-
-[class^="forth_land-"] {
-  display: -ms-grid;
+[class^=forth_land-] {
   display: grid;
   background: #b1d7e8;
   height: 100%;
@@ -784,43 +668,33 @@ header .main-mobile {
 
 .forth__land--grid {
   padding-top: 60px;
-  display: -ms-grid;
   display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-      grid-template-areas: "land1 land2 land3";
+  justify-content: center;
+  grid-template-areas: "land1 land2 land3";
   grid-gap: 28px;
 }
 
 @media (max-width: 768px) {
   .forth__land--grid {
-        grid-template-areas: "land1" "land2" "land3";
+    grid-template-areas: "land1" "land2" "land3";
   }
 }
-
 .forth_land-1 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: land1;
   background: #ffcc01;
 }
-
 .forth_land-1 img {
   margin-left: -26px;
   margin-top: -25px;
 }
-
 .forth_land-1 .p-button {
   padding: 0px 70px 50px 70px;
 }
-
 .forth_land-1 p {
   font-size: 13px;
   padding-bottom: 20px;
   color: #ffffff;
 }
-
 .forth_land-1 h2 {
   font-size: 18px;
   letter-spacing: 0px;
@@ -829,7 +703,6 @@ header .main-mobile {
   font-weight: 600;
   padding: 0px 0px 0px 40px;
 }
-
 .forth_land-1 h4 {
   font-size: 15px;
   letter-spacing: 0px;
@@ -838,7 +711,6 @@ header .main-mobile {
   font-weight: 600;
   padding: 0px 70px 0px 70px;
 }
-
 .forth_land-1 button {
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -852,26 +724,20 @@ header .main-mobile {
 }
 
 .forth_land-2 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: land1;
   background: #ffffff;
 }
-
 .forth_land-2 img {
   margin-left: -26px;
   margin-top: -25px;
 }
-
 .forth_land-2 .p-button {
   padding: 0px 70px 50px 70px;
 }
-
 .forth_land-2 p {
   font-size: 13px;
   padding-bottom: 20px;
 }
-
 .forth_land-2 h2 {
   font-size: 18px;
   letter-spacing: 0px;
@@ -879,7 +745,6 @@ header .main-mobile {
   font-weight: 600;
   padding: 0px 0px 0px 40px;
 }
-
 .forth_land-2 h4 {
   font-size: 15px;
   letter-spacing: 0px;
@@ -887,7 +752,6 @@ header .main-mobile {
   font-weight: 600;
   padding: 0px 70px 0px 70px;
 }
-
 .forth_land-2 button {
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -900,26 +764,20 @@ header .main-mobile {
 }
 
 .forth_land-3 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: land1;
   background: #ffffff;
 }
-
 .forth_land-3 img {
   margin-left: -26px;
   margin-top: -25px;
 }
-
 .forth_land-3 .p-button {
   padding: 0px 70px 50px 70px;
 }
-
 .forth_land-3 p {
   font-size: 13px;
   padding-bottom: 20px;
 }
-
 .forth_land-3 h2 {
   font-size: 18px;
   letter-spacing: 0px;
@@ -927,7 +785,6 @@ header .main-mobile {
   font-weight: 600;
   padding: 0px 0px 0px 40px;
 }
-
 .forth_land-3 h4 {
   font-size: 15px;
   letter-spacing: 0px;
@@ -935,7 +792,6 @@ header .main-mobile {
   font-weight: 600;
   padding: 0px 70px 0px 70px;
 }
-
 .forth_land-3 button {
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -945,5 +801,4 @@ header .main-mobile {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   padding-bottom: 10px;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
