@@ -1,0 +1,191 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lyginimas</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body class="bg-dark text-light">
+    <section>
+        <div class="container p-5">
+            <code>
+                Salyga pavercia textContent i skaiciu ir paziuri ar tai yra 0, tada skaicius perrasomas else pridedam skaiciu prie textContent
+            </code>
+            <br>
+            <br>
+            <br>
+            <br>
+            <code>
+                Paspaudus backspace mygtuka ant textContent naudojam funkcija slice textContent.slice(primasParametras, antrasParametras);
+                <br>
+                * Pirmas parametras nuo kur pradedam trinti
+                <br>
+                * Antras parametras kur baigiam
+            </code>
+            <br>
+            <br>
+            <br>
+            <br>
+            <code>
+                * Susikurti tuscia kintamaji kuriam veliau prilyginsit pirmaji skaiciu
+                <br>
+                * Paspaudus + kviesti funkcija kuri priskirs tuometini textContent jusu naujam kintamajam ir pavers dabartini textContent 0
+                <br>
+                * Paspaudus = kviesti funkcija kuri textContent lauke atvaizduos pirmo ir dabar ivesto skaiciaus suma
+            </code>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="row justify-content-center">
+                <button class="btn btn-outline-warning" onclick="getSquareRoot()">Square root</button>
+            </div>
+            <div class="row justify-content-center">
+                <button class="btn btn-outline-success" onclick="addDot()">addDot</button>
+            </div>
+            <div class="row justify-content-center">
+                <button class="btn btn-outline-danger" onclick="addSurprise()">Push me</button>
+            </div>
+            <div class="row justify-content-center align-items-center mb-3">
+                <div id="resultArea" class="col-3 p-3 fs-1">
+                    0
+                </div>
+            </div>
+            <div class="row justify-content-center align-items-center mb-3">
+
+                <div id="numberArea" class="col-3 p-3 fs-1">
+                    0
+                </div>
+                <div class="col-1 text-center">
+                    <svg onclick="deleteNumber()" xmlns="http://www.w3.org/2000/svg" width="48" height="48"
+                        fill="currentColor" class="bi bi-backspace" viewBox="0 0 16 16">
+                        <path
+                            d="M5.83 5.146a.5.5 0 0 0 0 .708L7.975 8l-2.147 2.146a.5.5 0 0 0 .707.708l2.147-2.147 2.146 2.147a.5.5 0 0 0 .707-.708L9.39 8l2.146-2.146a.5.5 0 0 0-.707-.708L8.683 7.293 6.536 5.146a.5.5 0 0 0-.707 0z" />
+                        <path
+                            d="M13.683 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-7.08a2 2 0 0 1-1.519-.698L.241 8.65a1 1 0 0 1 0-1.302L5.084 1.7A2 2 0 0 1 6.603 1h7.08zm-7.08 1a1 1 0 0 0-.76.35L1 8l4.844 5.65a1 1 0 0 0 .759.35h7.08a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1h-7.08z" />
+                    </svg>
+                </div>
+            </div>
+
+            <div class="row justify-content-center mb-3">
+                <div class="col-1 ">
+                    <button onclick="addNumber(1)" class="rounded-circle btn-lg btn btn-outline-light">
+                        1
+                    </button>
+                </div>
+                <div class="col-1">
+                    <button onclick="addNumber(2)" class="rounded-circle btn-lg btn btn-outline-light">
+                        2
+                    </button>
+                </div>
+                <div class="col-1">
+                    <button onclick="addNumber(3)" class="rounded-circle btn-lg btn btn-outline-light">
+                        3
+                    </button>
+                </div>
+                <div class="col-1 text-center">
+                    <svg onclick="mathActions('/')" xmlns="http://www.w3.org/2000/svg" width="48" height="48"
+                        fill="currentColor" class="bi bi-slash" viewBox="0 0 16 16">
+                        <path d="M11.354 4.646a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708l6-6a.5.5 0 0 1 .708 0z" />
+                    </svg>
+                </div>
+            </div>
+            <div class="row justify-content-center mb-3">
+                <div class="col-1">
+                    <button onclick="addNumber(4)" class="rounded-circle btn-lg btn btn-outline-light">
+                        4
+                    </button>
+                </div>
+                <div class="col-1">
+                    <button onclick="addNumber(5)" class="rounded-circle btn-lg btn btn-outline-light">
+                        5
+                    </button>
+                </div>
+                <div class="col-1">
+                    <button onclick="addNumber(6)" class="rounded-circle btn-lg btn btn-outline-light">
+                        6
+                    </button>
+                </div>
+                <div class="col-1 text-center">
+                    <svg onclick="mathActions('*')" xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                        fill="currentColor" class="bi bi-asterisk" viewBox="0 0 16 16">
+                        <path
+                            d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1z" />
+                    </svg>
+                </div>
+            </div>
+            <div class="row justify-content-center mb-3">
+                <div class="col-1">
+                    <button onclick="addNumber(7)" class="rounded-circle btn-lg btn btn-outline-light">
+                        7
+                    </button>
+                </div>
+                <div class="col-1">
+                    <button onclick="addNumber(8)" class="rounded-circle btn-lg btn btn-outline-light">
+                        8
+                    </button>
+                </div>
+                <div class="col-1">
+                    <button onclick="addNumber(9)" class="rounded-circle btn-lg btn btn-outline-light">
+                        9
+                    </button>
+                </div>
+                <div class="col-1 text-center">
+                    <svg onclick="mathActions('+')" xmlns="http://www.w3.org/2000/svg" width="48" height="48"
+                        fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                        <path
+                            d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                    </svg>
+                </div>
+            </div>
+            <div class="row justify-content-center mb-3">
+                <div class="col-1">
+
+                </div>
+                <div class="col-1">
+                    <button onclick="addNumber(0)" class="rounded-circle btn-lg btn btn-outline-light">
+                        0
+                    </button>
+                </div>
+                <div class="col-1">
+
+                </div>
+                <div class="col-1 text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" onclick="mathActions('-')" width="48" height="48"
+                        fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16">
+                        <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
+                    </svg>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-3"></div>
+                <div class="col-1 text-center">
+                    <svg style="fill: #fff; width: 30px; height: 30px;" onclick="equals(true)"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                        id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
+                        xml:space="preserve">
+                        <g>
+                            <g>
+                                <g>
+                                    <path
+                                        d="M85.333,213.333h341.333C473.728,213.333,512,175.061,512,128s-38.272-85.333-85.333-85.333H85.333     C38.272,42.667,0,80.939,0,128S38.272,213.333,85.333,213.333z" />
+                                    <path
+                                        d="M426.667,298.667H85.333C38.272,298.667,0,336.939,0,384s38.272,85.333,85.333,85.333h341.333     C473.728,469.333,512,431.061,512,384S473.728,298.667,426.667,298.667z" />
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+<script src="main.js"></script>
+
+</html>
