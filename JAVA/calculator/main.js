@@ -65,3 +65,4 @@ function addSurprise() {
     numberArea.textContent = ''
     numberArea.textContent = numberArea.textContent.trim() + 'Trojan installed'
 }
+
