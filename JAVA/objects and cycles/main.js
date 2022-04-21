@@ -44,9 +44,10 @@ const characters = [
 const tableBody = document.getElementById('table')
 
 
-function renderTableData() {
+function renderTableData(array) {
+    tableBody.innerHTML = '';
 
-    characters.map((character) => {
+    array.map((character) => {
         const rowElement = document.createElement('tr')
         const keys = Object.keys(character)
 
@@ -59,6 +60,7 @@ function renderTableData() {
         tableBody.appendChild(rowElement)
     })
 }
+
 
 //---------------------
 
@@ -78,7 +80,7 @@ console.log(getAllCharactersMass())
 
 // function getAllCharactersHeightSum() {
 //     return getAllCharactersHeight().reduce((first, second) => first + second);
-   
+
 // }
 
 // console.log(getAllCharactersHeightSum())
@@ -109,15 +111,63 @@ function buildTotalRowMass() {
 
 // --------------------
 
-    function getAllFirstNames() {
-        const names = characters.map((character) => {
-            return character.name.split(' ')[0]
-        })
-        return names;
+function getAllFirstNames() {
+    const names = characters.map((character) => {
+        return character.name.split(' ')[0]
+    })
+    return names;
 }
+
+
 
 console.log(getAllFirstNames())
 
-renderTableData()
+//----- Du skirtingi metodai RL ir RS ---------- //
+
+function getAllCharactersLettersRL() {
+    const letters = characters.map((character) => {
+        return character.name.length
+    }).reduce((a, b) => a + b)
+    return letters;
+}
+
+function getAllCharactersLettersRS() {
+    return characters
+    .map((character) => character.name.length)
+    .reduce((a, b) => a + b)
+}
+
+
+console.log(getAllCharactersLettersRL())
+console.log(getAllCharactersLettersRS())
+
+// ------------ filter
+
+const filteredMass = characters.filter((character) => character.mass >= 80);
+console.log(filteredMass);
+
+const filteredHeight = characters.filter((character) => character.height <= 180);
+console.log(filteredHeight);
+
+const filteredGender = characters.filter((character) => character.gender === 'male' );
+console.log(filteredGender);
+
+const filteredEyesColor = characters.filter((character) => character.eye_color === 'blue' );
+console.log(filteredEyesColor);
+
+// ---------------------------
+
+const someMale = characters.some((character) => character.gender = 'male')
+console.log(someMale)
+
+
+//-----------------------------
+
+const sortHeight = characters.sort(function(a, b){return b-a})
+console.log(sortHeight)
+
+
+
+renderTableData(characters)
 buildTotalRowHeight()
 buildTotalRowMass()
