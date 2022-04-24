@@ -171,3 +171,6 @@ console.log(sortHeight)
 renderTableData(characters)
 buildTotalRowHeight()
 buildTotalRowMass()
+
+
+
