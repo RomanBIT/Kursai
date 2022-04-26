@@ -9,39 +9,20 @@
 // console.log(me.firstName, me.milestones[0])
 // console.log(me["key with space"])
 
-const characters = [
+let characters = [
     {
         name: 'Luke Skywalker',
         height: '172',
         mass: '77',
         eye_color: 'blue',
         gender: 'male',
-    },
-    {
-        name: 'Darth Vader',
-        height: '202',
-        mass: '136',
-        eye_color: 'yellow',
-        gender: 'male',
-    },
-    {
-        name: 'Leia Organa',
-        height: '150',
-        mass: '49',
-        eye_color: 'brown',
-        gender: 'female',
-    },
-    {
-        name: 'Anakin Skywalker',
-        height: '188',
-        mass: '84',
-        eye_color: 'blue',
-        gender: 'male',
+        homeworld: '',
     },
 ];
 
 
 const tableBody = document.getElementById('table')
+const keys = Object.keys(characters[0])
 
 
 function renderTableData(array) {
@@ -49,16 +30,28 @@ function renderTableData(array) {
 
     array.map((character) => {
         const rowElement = document.createElement('tr')
-        const keys = Object.keys(character)
 
         for (let key of keys) {
             const dataCell = document.createElement('td');
-            dataCell.textContent = character[key];
+
+            if (key === 'homeworld') {
+                const buttonElement = document.createElement('button')
+                buttonElement.classList.add('btn', 'btn-outline-secondary', 'm-1')
+                buttonElement.textContent = 'Homeworld'
+                buttonElement.onclick = () => getHomeworld(character[key])
+                rowElement.appendChild(buttonElement)
+            } else {
+                dataCell.textContent = character[key];
+            }
+           
             rowElement.appendChild(dataCell)
         }
 
         tableBody.appendChild(rowElement)
     })
+    buildTotalRowHeight()
+    buildTotalRowMass()
+
 }
 
 
@@ -133,8 +126,8 @@ function getAllCharactersLettersRL() {
 
 function getAllCharactersLettersRS() {
     return characters
-    .map((character) => character.name.length)
-    .reduce((a, b) => a + b)
+        .map((character) => character.name.length)
+        .reduce((a, b) => a + b)
 }
 
 
@@ -149,10 +142,10 @@ console.log(filteredMass);
 const filteredHeight = characters.filter((character) => character.height <= 180);
 console.log(filteredHeight);
 
-const filteredGender = characters.filter((character) => character.gender === 'male' );
+const filteredGender = characters.filter((character) => character.gender === 'male');
 console.log(filteredGender);
 
-const filteredEyesColor = characters.filter((character) => character.eye_color === 'blue' );
+const filteredEyesColor = characters.filter((character) => character.eye_color === 'blue');
 console.log(filteredEyesColor);
 
 // ---------------------------
@@ -163,14 +156,34 @@ console.log(someMale)
 
 //-----------------------------
 
-const sortHeight = characters.sort(function(a, b){return b-a})
+const sortHeight = characters.sort(function (a, b) { return b - a })
 console.log(sortHeight)
 
+let fetchUrl = 'https://swapi.dev/api/people/';
+let previousPage;
+let nextPage
 
+function getCharacters(url) {
+    fetch(url).then((response) => {
+        response.json().then((data) => {
+            characters = data.results;
+            previousPage = data.previous;
+            nextPage = data.next;
+            renderTableData(characters)
+        })
+    })
+}
 
+function getHomeworld(url) {
+    fetch(url).then((response) => {
+        response.json().then((data) => {
+            console.log(data)
+        })
+    })
+}
+
+getCharacters(fetchUrl)
 renderTableData(characters)
-buildTotalRowHeight()
-buildTotalRowMass()
 
 
 
