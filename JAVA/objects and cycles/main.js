@@ -22,7 +22,31 @@ let characters = [
 
 
 const tableBody = document.getElementById('table')
-const keys = Object.keys(characters[0])
+const keys = ['name', 'height', 'mass', 'eye_color', 'gender', 'homeworld'];
+
+let fetchUrl = 'https://swapi.dev/api/people/';
+let previousPage;
+let nextPage
+
+function getCharacters(url) {
+    tableBody.textContent = 'May the force be with you...'
+    fetch(url).then((response) => {
+        response.json().then((data) => {
+            characters = data.results;
+            previousPage = data.previous;
+            nextPage = data.next;
+            renderTableData(characters)
+        })
+    })
+}
+
+function getHomeworld(url) {
+    fetch(url).then((response) => {
+        response.json().then((data) => {
+            renderHomeworldData(data)
+        })
+    })
+}
 
 
 function renderTableData(array) {
@@ -43,7 +67,7 @@ function renderTableData(array) {
             } else {
                 dataCell.textContent = character[key];
             }
-           
+
             rowElement.appendChild(dataCell)
         }
 
@@ -136,13 +160,13 @@ console.log(getAllCharactersLettersRS())
 
 // ------------ filter
 
-const filteredMass = characters.filter((character) => character.mass >= 80);
+const filteredMass = () => characters.filter((character) => character.mass >= 80);
 console.log(filteredMass);
 
-const filteredHeight = characters.filter((character) => character.height <= 180);
+const filteredHeight = () => characters.filter((character) => character.height <= 180);
 console.log(filteredHeight);
 
-const filteredGender = characters.filter((character) => character.gender === 'male');
+const filteredGender = () => characters.filter((character) => character.gender === 'male');
 console.log(filteredGender);
 
 const filteredEyesColor = characters.filter((character) => character.eye_color === 'blue');
@@ -159,28 +183,24 @@ console.log(someMale)
 const sortHeight = characters.sort(function (a, b) { return b - a })
 console.log(sortHeight)
 
-let fetchUrl = 'https://swapi.dev/api/people/';
-let previousPage;
-let nextPage
 
-function getCharacters(url) {
-    fetch(url).then((response) => {
-        response.json().then((data) => {
-            characters = data.results;
-            previousPage = data.previous;
-            nextPage = data.next;
-            renderTableData(characters)
-        })
-    })
+
+const planetList = document.getElementById('planetlist')
+
+function renderHomeworldData(data) {
+    planetList.innerHTML = '';
+    // const listElement = document.createElement('ul')
+    const keys = ['name', 'population', 'terrain', 'climate', 'gravity']
+
+    for (let key of keys) {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${key}: ${data[key]}`;
+
+        planetList.appendChild(listItem)
+    }
+
 }
 
-function getHomeworld(url) {
-    fetch(url).then((response) => {
-        response.json().then((data) => {
-            console.log(data)
-        })
-    })
-}
 
 getCharacters(fetchUrl)
 renderTableData(characters)

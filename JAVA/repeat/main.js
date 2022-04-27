@@ -6,7 +6,7 @@ boolean = true
 
 //2
 
-let array = [3, 6, 77, 'septym', 44, 'pempenki']
+let array = [3, 6, 77, 'septym', 44, 'pempenki'];
 let object = {
     name: 'Valdorfas',
     surname: 'Bauginis',
@@ -57,27 +57,52 @@ let object = {
 // console.log(array.map((item, index) => item == index))
 
 //13
-let result = array.filter((key) => key % 2 == 1)
-console.log(result)
+// let result = array.filter((key) => key % 2 == 1)
+// console.log(result)
 
 //14
-let aa, bb, cc;
+// function passParameter(param) {
+//     console.log(param);
+// }
 
-aa = 'Labas';
-bb = 'rytas';
-cc = 'draugeli';
+// passParameter('imetu parametra')
 
-console.log(aa, bb, cc)
+// let aa, bb, cc;
+
+// aa = 'Labas';
+// bb = 'rytas';
+// cc = 'draugeli';
+
+// console.log(aa, bb, cc
 
 //15
 const array2 = [10, 20, 30, 40, 50]
-console.log(array2)
 
-//16
-function getAll() {
-    return array2.reduce((a, b) => a + b)
-}
+// //16
+// function getAll() {
+//     return array2.reduce((a, b) => a + b)
+// }
 
-console.log(getAll())
+// console.log(getAll())
 
 //17
+
+// passParameter(array)
+// passParameter(array2)
+// passParameter(array + array2)
+
+
+//18
+// Object.keys(object).map((key) => console.log(object[key]));
+
+// console.log(object)
+
+
+//19
+
+const skaicius = number
+const objektas = object
+
+//20
+
+
