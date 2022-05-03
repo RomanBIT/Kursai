@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,40 +9,54 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Star Wars Table</title>
 </head>
+
 <body>
 
-<section class="container">
-    <h1>Star Wars Table</h1>
-    <button onclick="renderTableData(characters)" class="btn btn-secondary">Characters</button>
-    <button onclick="renderTableData(filteredMass())" class="btn btn-primary">Mass greater than 80</button>
-    <button onclick="renderTableData(filteredHeight())" class="btn btn-primary">Height less than 180</button>
-    <button onclick="renderTableData(filteredGender())" class="btn btn-primary">Gender male</button>
-    <button onclick="renderTableData(filteredEyesColor)" class="btn btn-primary">Eyes Color</button>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Height</th>
-                <th>Mass</th>
-                <th>Eye color</th>
-                <th>Gender</th>
-                <th>Homeworld</th>
-            </tr>
-        </thead>
+    <section class="container">
+        <h1>Star Wars Table</h1>
+        <button onclick="renderTableData(characters)" class="btn btn-secondary">Characters</button>
+        <button onclick="renderTableData(charactersWithGreaterMassThan80())" class="btn btn-primary">Mass greater than
+            80</button>
+        <button onclick="renderTableData(charactersWithLessHeightThan180())" class="btn btn-primary">Height less than
+            180</button>
+        <button onclick="renderTableData(charatersMale())" class="btn btn-primary">Gender male</button>
+        <button onclick="renderTableData(charatersWithBlueEyes())" class="btn btn-primary">Eyes Color</button>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th onclick="sortByAlphabet('name')">Name</th>
+                    <th onclick="sortByNumber('height')">Height</th>
+                    <th onclick="sortByNumber('mass')">Mass</th>
+                    <th onclick="sortByAlphabet('eye_color')">Eye color</th>
+                    <th onclick="sortByAlphabet('gender')">Gender</th>
+                    <th onclick="sortByAlphabet('gender')">Homeworld</th>
+                </tr>
+            </thead>
 
-        <tbody id="table">
+            <tbody id="table">
 
-        </tbody>
-        <ul id="planetlist">
+            </tbody>
+            <ul id="planetlist">
 
-        </ul>
-    </table>
+            </ul>
+        </table>
 
-    <button onclick="getCharacters(previousPage)" class="btn btn-outline-secondary">Previous</button>
-    <button onclick="getCharacters(nextPage)" class="btn btn-outline-primary">Next</button>
-</section>
+        <button onclick="getCharacters(previousPage)" class="btn btn-outline-secondary">Previous</button>
+        <button onclick="getCharacters(nextPage)" class="btn btn-outline-primary">Next</button>
+<div class="m-2 p-3">
+        <form>
+            <input id="name" placeholder="Enter name">
+            <input id="height" placeholder="Enter height">
+            <input id="mass" placeholder="Enter mass">
+            <input id="eye_color" placeholder="Enter eye_color">
+            <input id="gender" placeholder="Enter gender">
+            <button class="btn btn-success" type="button" onclick="addCharacter()">Add character</button>
+        </form>
+    </div>
+    </section>
 
 
 </body>
 <script src="./main.js"></script>
+
 </html>
