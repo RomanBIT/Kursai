@@ -69,3 +69,9 @@ function getProfileData() {
 
 getPeople();
 
+
+
+feedElement.innerHTML += `
+            <div>${person}</div>
+            <div>${data.activity}</div>
+            `

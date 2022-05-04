@@ -41,15 +41,12 @@ function feedPeople() {
                 .then((data) => {
                     feedElement.innerHTML +=
                         `
-            <div class="card shadow-l p-2 mb-3 bg-body rounded" style="width: 14rem;">
+            <div class="card shadow-l p-3 mb-5 bg-body rounded" style="width: 12rem;">
             <img src="${person.picture.large}" id="picture" class="card-img-top p-3 shadow p-3 mb-5 bg-body rounded">
             <ul class="list-group list-group-flush">
-                <li id="firstName1" class="list-group-item">Name: ${person.name.first}</li>
-                <li id="lastName1" class="list-group-item">Surname: ${person.name.last}</li>
-                <li id="lastName1" class="list-group-item">Hobby: ${data.activity}</li>
-                <button class="btn btn-outline-primary">Poke</button>
-                <li id="lastName1" class="list-group-item">Type: ${data.type}</li>
-                <li id="lastName1" class="list-group-item">Participants: ${data.participants}</li>
+                <li id="firstName1" class="list-group-item">${person.name.first}</li>
+                <li id="lastName1" class="list-group-item">${person.name.last}</li>
+                <li id="lastName1" class="list-group-item">${person.activity}</li>
             </ul>
         </div>
             `
@@ -59,10 +56,7 @@ function feedPeople() {
     })
 }
 
-
-
 getPeople();
 
+
 console.log('http://www.boredapi.com/api/activity')
-
-
