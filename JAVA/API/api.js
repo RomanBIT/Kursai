@@ -59,10 +59,26 @@ function feedPeople() {
     })
 }
 
+const activity = document.getElementById('activity')
+const list = document.getElementById('list')
+let activeRoom = false
 
+function createActivity() {
+    if (!activeRoom) {
+        activeRoom = true;
+        people.map((person, index) => {
+            if (index <= 4) {
+                let randomNumber = Math.floor(Math.random() * 100);
+                list.innerHTML +=
+                    `
+                    <div class="card shadow-l p-2 m-1" style="width: 9rem; height: 12rem;">
+        <div>${people[randomNumber].name.first} ${people[randomNumber].name.last}</div>
+        <img src="${people[randomNumber].picture.large}">
+        </div>
+                `
+            }
+        })
+    }
+}
 
 getPeople();
-
-console.log('http://www.boredapi.com/api/activity')
-
-

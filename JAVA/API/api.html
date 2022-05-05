@@ -9,10 +9,19 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Document</title>
 </head>
+<header class="container justify-content-center">
+    <div class="row py-3">
+        <input type="text" class="rounded" style="width: 30rem;"> <button class="btn btn-warning mx-2" style="width: 10rem;">Search</button>
+    </div>
+    
+
+
+</header>
 
 <body>
-    <div class="container">
-        <section class="row justify-content-center p-3 bg-primary bg-opacity-50">
+    <section class="container">
+        <div class="row col-12 justify-content-around p-3 bg-primary bg-opacity-50">
+
             <div class="card shadow-lg p-3 mb-5 bg-body rounded" style="width: 18rem;">
                 <img src="./testimony.png" id="picture" class="card-img-top p-3 shadow p-3 mb-5 bg-body rounded">
                 <div class="card-body">
@@ -26,15 +35,19 @@
                     <li id="city" class="list-group-item">City:</li>
                 </ul>
             </div>
-        </section>
-    </div>
 
-    <div class="container">
-        <div class="row m-5">
-        <button class="btn btn-lg btn-outline-primary opacity-50">Create activity</button>
-    </div>
+            <div class="row col-8">
+                <button id="activity" style="height: 50px;" onclick="createActivity()"
+                    class="btn btn-lg  btn-outline-light">Create
+                    activity</button>
+                <div id="list" class="row col-12 justify-content-between">
+                </div>
+            </div>
 
-    </div>
+        </div>
+
+
+    </section>
 
 
     <section id="feed" class=" row col-12 justify-content-between px-5 pt-4">
