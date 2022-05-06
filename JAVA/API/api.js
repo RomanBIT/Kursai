@@ -8,7 +8,7 @@ const country = document.getElementById('country')
 const city = document.getElementById('city')
 const picture = document.getElementById('picture')
 
-let people;
+let people
 
 function getPeople() {
     fetch(baseUrl + people100)
@@ -80,5 +80,24 @@ function createActivity() {
         })
     }
 }
+
+
+const searchBar = document.getElementById('searchBar')
+
+searchBar.addEventListener('keyup', (e) => {
+    const searchString = e.target.value.toLowerCase();
+    console.log(searchString)
+    const filteredCharacters = people.filter((person) => {
+        if (
+            person.name.first.toLowerCase().includes(searchString) ||
+            person.name.last.toLowerCase().includes(searchString)
+        ) {
+            return person
+
+        }
+    })
+    console.log(filteredCharacters)
+})
+
 
 getPeople();
