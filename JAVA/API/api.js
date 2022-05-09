@@ -87,16 +87,27 @@ const searchBar = document.getElementById('searchBar')
 searchBar.addEventListener('keyup', (e) => {
     const searchString = e.target.value.toLowerCase();
     console.log(searchString)
-    const filteredCharacters = people.filter((person) => {
+ 
+
+
+
+    const listGroup = document.getElementById('listGroup')
+
+    listGroup.innerHTML = '';
+
+    people.filter((person) => {
         if (
             person.name.first.toLowerCase().includes(searchString) ||
             person.name.last.toLowerCase().includes(searchString)
         ) {
-            return person
-
+            listGroup.innerHTML += `
+            <li class="list-group-item">
+            <img src="${person.picture.large}">
+            ${person.name.first} ${person.name.last}
+            </li>`
         }
+
     })
-    console.log(filteredCharacters)
 })
 
 
