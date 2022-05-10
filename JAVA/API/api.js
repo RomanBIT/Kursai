@@ -57,6 +57,7 @@ function feedPeople() {
                 }))
         }
     })
+
 }
 
 const activity = document.getElementById('activity')
@@ -66,18 +67,25 @@ let activeRoom = false
 function createActivity() {
     if (!activeRoom) {
         activeRoom = true;
-        people.map((person, index) => {
-            if (index <= 4) {
-                let randomNumber = Math.floor(Math.random() * 100);
-                list.innerHTML +=
-                    `
+        // people.map((person, index) => {
+        //     if (index <= 4) {
+        let randomNumber = Math.floor(Math.random() * 100);
+        let index = 0
+
+        let a = setInterval(function () {
+            let randomNumber = Math.floor(Math.random() * 100);
+            list.innerHTML +=
+                `
                     <div class="card shadow-l p-2 m-1" style="width: 9rem; height: 12rem;">
         <div>${people[randomNumber].name.first} ${people[randomNumber].name.last}</div>
         <img src="${people[randomNumber].picture.large}">
-        </div>
-                `
-            }
-        })
+        </div>`
+            index++
+            if (index === 10) clearInterval(a);
+        }, 500);
+
+        //     }
+        // })
     }
 }
 
@@ -87,7 +95,7 @@ const searchBar = document.getElementById('searchBar')
 searchBar.addEventListener('keyup', (e) => {
     const searchString = e.target.value.toLowerCase();
     console.log(searchString)
- 
+
 
 
 
@@ -101,10 +109,10 @@ searchBar.addEventListener('keyup', (e) => {
             person.name.last.toLowerCase().includes(searchString)
         ) {
             listGroup.innerHTML += `
-            <li class="list-group-item">
-            <img src="${person.picture.large}">
-            ${person.name.first} ${person.name.last}
-            </li>`
+                <li class="list-group-item" >
+                    <img src="${person.picture.large}">
+                        ${person.name.first} ${person.name.last}
+                    </li>`
         }
 
     })
