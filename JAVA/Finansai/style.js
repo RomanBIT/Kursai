@@ -1,16 +1,35 @@
 
 
-let row = 1;
+let array = JSON.parse(localStorage.getItem('key')) || []
 
 const addItem = document.getElementById('addItem')
-addItem.addEventListener("click", displayDetails)
+// addItem.addEventListener("click", displayDetails)
+
+const inputDescription = document.getElementById('inputDescription')
+const inputQuantity = document.getElementById('inputQuantity')
+
+function add() {
+    if (!inputDescription.value || !inputQuantity.value) {
+        alert("Please fill all the boxes");
+        return
+    }
+
+    let object = {
+        inputDescription: inputDescription.value,
+        inputQuantity: inputQuantity.value,
+        date: getDate()
+    }
+    
+    array.push(object)
+
+    localStorage.setItem('key', JSON.stringify(array))
+    displayDetails()
+
+}
 
 
-function displayDetails() {
-    const inputDescription = document.getElementById('inputDescription').value;
-    const inputQuantity = document.getElementById('inputQuantity').value;
+function getDate() {
     let date = new Date()
-   
     let ss = String(date.getSeconds()).padStart(2, '0')
     let min = String(date.getMinutes()).padStart(2, '0')
     let hh = String(date.getHours()).padStart(2, '0')
@@ -20,34 +39,41 @@ function displayDetails() {
 
     today = `${yyyy}/${mm}/${dd}  ${hh}:${min}:${ss}`
 
+    return today
 
-// Table content adding
-
-    if (!inputDescription || !inputQuantity) {
-        alert("Please fill all the boxes");
-        return
-    }
-    let display = document.getElementById('display')
-
-    let newRow = display.insertRow(row)
-
-let editButton = `<button id="editItem" class="btn btn-outline-warning">Edit</button>
-`
-let deleteButton = `<button id="deleteItem" class="btn btn-outline-danger">Delete</button>
-`
-
-    let cell1 = newRow.insertCell(0)
-    let cell2 = newRow.insertCell(1)
-    let cell3 = newRow.insertCell(2)
-    let cell4 = newRow.insertCell(3)
-    let cell5 = newRow.insertCell(4)
-
-    cell1.innerHTML = inputDescription
-    cell2.innerHTML = inputQuantity
-    cell3.innerHTML = today
-    cell4.innerHTML = editButton
-    cell5.innerHTML = deleteButton
-
-    row++
 }
+function displayDetails() {
+   
+    array.map(item => {
+        let newRow = display.insertRow()
+
+        //-- mygtukai 
+
+        const editButton = document.createElement('button')
+        editButton.textContent = 'Edit'
+
+        const deleteButton = document.createElement('button')
+        deleteButton.textContent = 'Delete'
+
+
+
+
+        let cell1 = newRow.insertCell(0)
+        let cell2 = newRow.insertCell(1)
+        let cell3 = newRow.insertCell(2)
+        let cell4 = newRow.insertCell(3).appendChild(editButton)
+        let cell5 = newRow.insertCell(4).appendChild(deleteButton)
+
+        cell1.innerHTML = item.inputDescription
+        cell2.innerHTML = item.inputQuantity
+        cell3.innerHTML = item.date
+
+        
+        
+    })
+
+}
+
+displayDetails()
+//-----------
 
