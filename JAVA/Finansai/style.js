@@ -7,6 +7,7 @@ const addItem = document.getElementById('addItem')
 
 const inputDescription = document.getElementById('inputDescription')
 const inputQuantity = document.getElementById('inputQuantity')
+let idFlow = 1
 
 function add() {
     if (!inputDescription.value || !inputQuantity.value) {
@@ -17,15 +18,21 @@ function add() {
     let object = {
         inputDescription: inputDescription.value,
         inputQuantity: inputQuantity.value,
-        date: getDate()
+        date: getDate(),
+        id: idFlow++
     }
-    
+
     array.push(object)
 
     localStorage.setItem('key', JSON.stringify(array))
     displayDetails()
 
 }
+
+function del() {
+    localStorage.removeItem('key')
+}
+
 
 
 function getDate() {
@@ -43,7 +50,9 @@ function getDate() {
 
 }
 function displayDetails() {
-   
+
+    display.innerHTML = ''
+
     array.map(item => {
         let newRow = display.insertRow()
 
@@ -57,23 +66,27 @@ function displayDetails() {
 
 
 
-
         let cell1 = newRow.insertCell(0)
         let cell2 = newRow.insertCell(1)
         let cell3 = newRow.insertCell(2)
-        let cell4 = newRow.insertCell(3).appendChild(editButton)
-        let cell5 = newRow.insertCell(4).appendChild(deleteButton)
+        let cell4 = newRow.insertCell(3)
+        let cell5 = newRow.insertCell(4).appendChild(editButton)
+        let cell6 = newRow.insertCell(5).appendChild(deleteButton)
 
-        cell1.innerHTML = item.inputDescription
-        cell2.innerHTML = item.inputQuantity
-        cell3.innerHTML = item.date
 
-        
-        
+        cell1.innerHTML = item.id
+        cell2.innerHTML = item.inputDescription
+        cell3.innerHTML = item.inputQuantity
+        cell4.innerHTML = item.date
+
     })
 
 }
 
+
+
 displayDetails()
 //-----------
+
+
 

@@ -16,14 +16,17 @@
         <div class="p-3">
             <input placeholder="Description" id="inputDescription" alt="description" type="text">
             <input placeholder="Quantity" id="inputQuantity" alt="quantity" type="text">
-            <button onclick="add()" id="addItem" type="button" style="width: 10rem;" class="btn btn-outline-primary">Add item</button>
-           
+            <button onclick="add()" id="addItem" type="button" style="width: 10rem;" class="btn btn-outline-primary">Add
+                item</button>
+
         </div>
     </header>
     <section class="container">
-        <table id="display" class="table">
+        <table class="table">
             <thead>
+
                 <tr>
+                    <th>#</th>
                     <th>Description</th>
                     <th>Quantity</th>
                     <th>Date and Time</th>
@@ -31,10 +34,11 @@
                     <th>Delete</th>
                 </tr>
             </thead>
+            <tbody id="display"></tbody>
         </table>
     </section>
 
-   
+
 
 </body>
 <script src="./style.js"></script>
