@@ -29,9 +29,7 @@ function add() {
 
 }
 
-function del() {
-    localStorage.removeItem('key')
-}
+
 
 
 
@@ -60,10 +58,14 @@ function displayDetails() {
 
         const editButton = document.createElement('button')
         editButton.textContent = 'Edit'
+        editButton.onclick = () => edit()
 
+       
         const deleteButton = document.createElement('button')
         deleteButton.textContent = 'Delete'
+        deleteButton.onclick = () => del(item.id)
 
+       
 
 
         let cell1 = newRow.insertCell(0)
@@ -83,10 +85,17 @@ function displayDetails() {
 
 }
 
+function del(id) {
+    array = array.filter(item => item.id !== id)
+    localStorage.setItem('key', JSON.stringify(array))
+    displayDetails()
+}
 
 
+    
 displayDetails()
-//-----------
+
+
 
 
 
