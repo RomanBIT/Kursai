@@ -89,10 +89,52 @@ function del(id) {
     array = array.filter(item => item.id !== id)
     localStorage.setItem('key', JSON.stringify(array))
     displayDetails()
+    
 }
 
 
-    
+function edit() {
+
+const popup = document.createElement('dialog')
+popup.open = true
+
+const input1 = document.createElement('input')
+input1.value = item.inputDescription
+
+const input2 = document.createElement('input')
+input2.value = item.inputQuantity
+
+const save = document.createElement('button')
+save.onclick = () => {
+    item.inputDescription = input1.value
+    item.inputQuantity = input2.value
+}
+
+}
+
+
+
+
+
+const sortQuantity = () => {
+    // array.sort(function(a, b){return a.inputQuantity - b.inputQuantity})
+    array.sort((a, b) => a.inputQuantity - b.inputQuantity)
+    displayDetails()
+}
+
+const sortDescription = () => {
+    array.sort(function(a, b){
+        let nameA = a.inputDescription.toLowerCase(), nameB = b.inputDescription.toLowerCase();
+        if (nameA < nameB) 
+         return -1;
+        if (nameA > nameB)
+         return 1;
+        return 0; 
+       });
+    displayDetails()
+}
+
+
 displayDetails()
 
 
