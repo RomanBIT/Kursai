@@ -1,84 +1,84 @@
-class Rectangle {
-    constructor(_width, _height) {
-        this.width = _width
-        this.height = _height
-    }
-    calcArea() {
-        return this.height * this.width;
-    }
+// class Rectangle {
+//     constructor(_width, _height) {
+//         this.width = _width
+//         this.height = _height
+//     }
+//     calcArea() {
+//         return this.height * this.width;
+//     }
 
-}
+// }
 
-const rectangle1 = new Rectangle(10, 15)
-const rectangle2 = new Rectangle(5, 10)
-const rectangle3 = new Rectangle('penkiolika', 'dvidesimt')
+// const rectangle1 = new Rectangle(10, 15)
+// const rectangle2 = new Rectangle(5, 10)
+// const rectangle3 = new Rectangle('penkiolika', 'dvidesimt')
 
-console.log(rectangle1)
-console.log(rectangle1.width)
-console.log(rectangle1.calcArea())
-
-
-///------ PVZ -------- ///
-
-class Staciakampis {
-    constructor(aukstis, plotis) {
-        this.height = aukstis;
-        this.width = plotis;
-    }
-    // Getter
-    get area() {
-        return this.calcArea();
-    }
-    // Method
-    calcArea() {
-        return this.height * this.width;
-    }
-}
-
-const rectangle4 = new Staciakampis(20, 30);
-
-console.log(rectangle4)
-console.log(rectangle4.area); // 600
+// console.log(rectangle1)
+// console.log(rectangle1.width)
+// console.log(rectangle1.calcArea())
 
 
-///------------ KLASES TABLE
+// ///------ PVZ -------- ///
 
-class Animal {
-    constructor({ _age, _name }) {
-        this.age = _age
-        this.name = _name
-    }
+// class Staciakampis {
+//     constructor(aukstis, plotis) {
+//         this.height = aukstis;
+//         this.width = plotis;
+//     }
+//     // Getter
+//     get area() {
+//         return this.calcArea();
+//     }
+//     // Method
+//     calcArea() {
+//         return this.height * this.width;
+//     }
+// }
 
-    speak() {
-        console.log(`${animal1.name} makes`)
-        console.log(`${dog1.name} makes a`)
-        console.log(`${dog2.name} makes a noise`)
-    }
-}
+// const rectangle4 = new Staciakampis(20, 30);
 
-class Dog extends Animal {
-    constructor({ _age, _name, _says }) {
-        super({ _age, _name, _says })
-        this.type = 'Dog'
-        this.says = _says
-    }
-}
+// console.log(rectangle4)
+// console.log(rectangle4.area); // 600
 
-class Doggo extends Dog {
-    constructor({ _age, _name, _says }) {
-        super({ _age, _name, _says })
-        this.weight = 34
-    }
-}
 
-const animal1 = new Animal({ _age: 11, _name: 'Rublis' })
-const dog1 = new Dog({ _age: 1, _name: 'Capucci', _says: 'Woof woof' })
-const dog2 = new Doggo({ _age: 10, _name: 'Mayo', _says: 'Japanese woof' })
+// ///------------ KLASES TABLE
 
-animal1.speak()
-console.log(animal1)
-console.log(dog1)
-console.log(dog2)
+// class Animal {
+//     constructor({ _age, _name }) {
+//         this.age = _age
+//         this.name = _name
+//     }
+
+//     speak() {
+//         console.log(`${animal1.name} makes`)
+//         console.log(`${dog1.name} makes a`)
+//         console.log(`${dog2.name} makes a noise`)
+//     }
+// }
+
+// class Dog extends Animal {
+//     constructor({ _age, _name, _says }) {
+//         super({ _age, _name, _says })
+//         this.type = 'Dog'
+//         this.says = _says
+//     }
+// }
+
+// class Doggo extends Dog {
+//     constructor({ _age, _name, _says }) {
+//         super({ _age, _name, _says })
+//         this.weight = 34
+//     }
+// }
+
+// const animal1 = new Animal({ _age: 11, _name: 'Rublis' })
+// const dog1 = new Dog({ _age: 1, _name: 'Capucci', _says: 'Woof woof' })
+// const dog2 = new Doggo({ _age: 10, _name: 'Mayo', _says: 'Japanese woof' })
+
+// animal1.speak()
+// console.log(animal1)
+// console.log(dog1)
+// console.log(dog2)
 
 //-------- TODO LIST
 
@@ -86,6 +86,7 @@ class ToDoList {
     constructor() {
         this.list = document.getElementById('list')
         this.toDo = []
+
     }
 
     add(text) {
@@ -95,19 +96,29 @@ class ToDoList {
 
     update() {
         this.list.innerHTML = ''
-       
+
+
         for (let text of this.toDo) {
             const listItem = document.createElement('li')
 
-            listItem.textContent = text
+            listItem.innerHTML = `
+            <div class="input-group mb-3">
+  <div class="input-group-text">
+    <input class="form-check-input mt-0" type="checkbox" value="asd" id="test">
+  </div>
+  <input type="text" value="${text}" class="form-control" aria-label="Text input with checkbox">
+`
 
             this.list.appendChild(listItem)
         }
     }
 
-    delete(index) {
-        this.toDo.splice(index, 1)
-        this.update()
+    delete(value) {
+        if (this.toDo.indexOf(value) > -1) {
+            this.toDo.splice(this.toDo.indexOf(value), 1)
+            this.update()
+        }
+
     }
 }
 
@@ -115,9 +126,11 @@ class ToDoList {
 
 const input = document.getElementById('input')
 const addButton = document.getElementById('add')
-const deleteBuutton = document.getElementById('delete')
+const deleteButton = document.getElementById('delete')
 
 const newList = new ToDoList()
 
 addButton.onclick = () => newList.add(input.value)
-deleteBuutton.onclick = () => newList.delete(input.value)
+deleteButton.onclick = () => newList.delete(input.value)
+
+

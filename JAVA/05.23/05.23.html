@@ -10,11 +10,22 @@
 </head>
 <body>
 
-    <h2>KLASES</h2>
-    <input id="input">
-    <button id="add">Add</button>
-    <button id="delete">Delete</button>
-    <ul id="list"></ul>
+    
+    <div class="container col-12">
+        <h2>To do list</h2>
+        <div class="input-group mb-3 row-cols-4">
+            <input id="input" type="text" class="form-control" placeholder="Task to do" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button id="add" class="btn btn-outline-primary" type="button" id="button-addon2">Add</button>
+          </div>
+          <ol id="list"></ol>
+          <button type="button" id="delete" value="remove" class="btn btn-outline-danger">DELETE</button>
+    </div>
+    
+
+    <div class="container col-12">
+        <h2>Done</h2>
+    </div>
+    
     
 </body>
 <script src="./05.23.js"></script>
