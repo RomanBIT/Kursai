@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="username"></div>
+
+    <input>
+
+    <button onclick="addUrlParams()">Submit</button>
+</body>
+
+
+<script>
+
+
+
+    const input = document.querySelector('input')
+    let username;
+
+    if (window.location.search) {
+        username = window.location.search.split('=')[1]
+        const input = document.querySelector('#username')
+        input.textContent = username
+
+        //---- Kaip pakeisti procentus i space //
+        let str = document.getElementById("username").innerHTML;
+        let res = str.replace(/%20/g, " ");
+        document.getElementById("username").innerHTML = res;
+
+    }
+
+
+    function addUrlParams() {
+        window.location.href = `?username=Welcome home ${input.value}`
+
+    }
+
+</script>
+
+</html>
